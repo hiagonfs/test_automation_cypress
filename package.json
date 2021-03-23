@@ -1,0 +1,26 @@
+{
+  "name": "testautomation_cypress",
+  "version": "1.0.0",
+  "description": "automation tests for challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "test run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiagonfs/testautomation_cypress.git"
+  },
+  "author": "hiago fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiagonfs/testautomation_cypress/issues"
+  },
+  "homepage": "https://github.com/hiagonfs/testautomation_cypress#readme",
+  "devDependencies": {
+    "cypress": "^6.8.0",
+    "cypress-cucumber-preprocessor": "^4.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
