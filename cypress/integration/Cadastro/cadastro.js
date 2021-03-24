@@ -1,6 +1,6 @@
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import Browser from '../../page-object/browser';
-import PaginaCadastraUsuario from '../../page-object/cadastro_usuarios/cadastro-usuario-cadastrar';
+import RegisterUserPage from '../../page-object/register_user/registerUser';
 
 const VALID_NAME = 'Hiago Fernandes';
 const INVALID_NAME = 'Hiago';
@@ -14,41 +14,41 @@ Given(/^eu acesso a página inicial do sistema$/, () => {
 });
 
 When(/^inserir o email$/, () => {
-  PaginaCadastraUsuario.insertEmail(VALID_EMAIL);
+  RegisterUserPage.insertEmail(VALID_EMAIL);
 });
 
 When(/^inserir o nome$/, () => {
-  PaginaCadastraUsuario.insertName(VALID_NAME);
+  RegisterUserPage.insertName(VALID_NAME);
 });
 
 When(/^inserir o nome incompleto$/, () => {
-  PaginaCadastraUsuario.insertName(INVALID_NAME);
+  RegisterUserPage.insertName(INVALID_NAME);
 });
 
 And(/^inserir a senha$/, () => {
-  PaginaCadastraUsuario.insertPassword(VALID_PASSWORD);
+  RegisterUserPage.insertPassword(VALID_PASSWORD);
 });
 
 And(/^visualizar as informações do usuário cadastrado$/, () => {
-  PaginaCadastraUsuario.isTableVisible();
-  PaginaCadastraUsuario.getContentTable()
+  RegisterUserPage.isTableVisible();
+  RegisterUserPage.getContentTable()
     .should('have.length', 1);
 });
 
 And(/^clicar no botão excluir$/, () => {
-  PaginaCadastraUsuario.pressionDeleteButton();
+  RegisterUserPage.pressionDeleteButton();
 });
 
 And(/^inserir o email invalido$/, () => {
-  PaginaCadastraUsuario.insertEmail(INVALID_EMAIL);
+  RegisterUserPage.insertEmail(INVALID_EMAIL);
 });
 
 And(/^inserir a senha incompleta$/, () => {
-  PaginaCadastraUsuario.insertPassword(INVALID_PASSWORD);
+  RegisterUserPage.insertPassword(INVALID_PASSWORD);
 });
 
 And(/^pressiono o botao Cadastrar$/, () => {
-  PaginaCadastraUsuario.pressionRegisterButton();
+  RegisterUserPage.pressionRegisterButton();
 });
 
 Then(/^devo visualizar o título: Cadastro de usuários$/, () => {
@@ -56,39 +56,39 @@ Then(/^devo visualizar o título: Cadastro de usuários$/, () => {
 });
 
 Then(/^devo visualizar as informações do usuário cadastrado$/, () => {
-  PaginaCadastraUsuario.isTableVisible();
+  RegisterUserPage.isTableVisible();
 });
 
 Then(/^o usuario deve ser apagado da tabela$/, () => {
-  PaginaCadastraUsuario.isTableNotVisible();
+  RegisterUserPage.isTableNotVisible();
 });
 
 Then(/^devo visualizar a mensagem: O campo Nome é obrigatório.$/, () => {
-  PaginaCadastraUsuario.getMessageName()
+  RegisterUserPage.getMessageName()
     .should('eq', 'O campo Nome é obrigatório.');
 });
 
 Then(/^devo visualizar a mensagem: O campo E-mail é obrigatório.$/, () => {
-  PaginaCadastraUsuario.getMessageEmail()
+  RegisterUserPage.getMessageEmail()
     .should('eq', 'O campo E-mail é obrigatório.');
 });
 
 Then(/^devo visualizar a mensagem: O campo Senha é obrigatório.$/, () => {
-  PaginaCadastraUsuario.getMessagePassword()
+  RegisterUserPage.getMessagePassword()
     .should('eq', 'O campo Senha é obrigatório.');
 });
 
 Then(/^devo visualizar a mensagem: Por favor, insira um nome completo.$/, () => {
-  PaginaCadastraUsuario.getMessageName()
+  RegisterUserPage.getMessageName()
     .should('eq', 'Por favor, insira um nome completo.');
 });
 
 Then(/^devo visualizar a mensagem: Por favor, insira um e-mail válido.$/, () => {
-  PaginaCadastraUsuario.getMessageEmail()
+  RegisterUserPage.getMessageEmail()
     .should('eq', 'Por favor, insira um e-mail válido.');
 });
 
 Then(/^devo visualizar a mensagem: A senha deve conter ao menos 8 caracteres.$/, () => {
-  PaginaCadastraUsuario.getMessagePassword()
+  RegisterUserPage.getMessagePassword()
     .should('eq', 'A senha deve conter ao menos 8 caracteres.');
 });

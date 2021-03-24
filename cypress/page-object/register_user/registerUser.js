@@ -8,7 +8,7 @@ const MESSAGE_EMAIL_FIELD = '//*[@id="root"]/div/div/div[2]/form/div[2]/p';
 const MESSAGE_PASSWORD_FIELD = '//*[@id="root"]/div/div/div[2]/form/div[3]/p';
 const TABLE = '//*[@id="root"]/div/div/div[2]/table';
 
-class PaginaCadastraUsuario {
+class RegisterUserPage {
 
   static pressionRegisterButton() {
     cy.xpath(REGISTER_BUTTON).first().click();
@@ -56,4 +56,4 @@ class PaginaCadastraUsuario {
 
 }
 
-export default PaginaCadastraUsuario;
+export default RegisterUserPage;
