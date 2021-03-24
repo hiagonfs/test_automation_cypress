@@ -14,6 +14,24 @@ class RegisterUserPage {
     cy.xpath(REGISTER_BUTTON).first().click();
   }
 
+  static nameFieldIsVisible() {
+    return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[1]/label')
+      .invoke('text')
+      .contains('Nome');
+  }
+
+  static emailFieldIsVisible() {
+    return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[2]/label')
+      .invoke('text')
+      .contains('E-mail');
+  }
+
+  static passwordFieldIsVisible() {
+    return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[3]/label')
+      .invoke('text')
+      .contains('Senha');
+  }
+
   static insertName(value) {
     cy.xpath(NAME_FIELD).type(value);
   }

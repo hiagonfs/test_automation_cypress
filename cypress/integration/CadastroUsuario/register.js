@@ -51,8 +51,8 @@ And(/^pressiono o botao Cadastrar$/, () => {
   RegisterUserPage.pressionRegisterButton();
 });
 
-Then(/^devo visualizar o título: Cadastro de usuários$/, () => {
-  cy.title().should('eq', 'Cadastro de usuários');
+Then(/^devo visualizar as informações do formulário$/, () => {
+  return (RegisterUserPage.nameFieldIsVisible() && RegisterUserPage.emailFieldIsVisible() && RegisterUserPage.passwordFieldIsVisible());
 });
 
 Then(/^devo visualizar as informações do usuário cadastrado$/, () => {
