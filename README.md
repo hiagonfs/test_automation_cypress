@@ -15,6 +15,14 @@ O Cypress.io é um framework de testes automatizados end-to-end que usa JavaScri
 
 Os testes  implementados neste repositório validam o cadastro de usuários de uma página. 
 
+### Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Cypress](https://www.cypress.io/)
+- [Cucumber](https://cucumber.io/)
+- [Node.js](https://nodejs.org/en/)
+
 ### Como realizar o setup?
 
 Parar executar siga a sequência de passos abaixo:
