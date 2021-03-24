@@ -6,7 +6,7 @@ Feature: Cadastro de usuários
 
   @acesso_pagina_inicial
   Scenario: Acessar a página inicial do sistema
-    Then devo visualizar as informações do formulário
+    Then devo visualizar os campos do formulário
 
   @usuario_basico
   Scenario: Cadastrar usuario válido e com sucesso

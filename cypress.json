@@ -1,4 +1,10 @@
 {
   "chromeWebSecurity": false,
-  "testFiles": "**/*.feature"
+  "testFiles": "**/*.feature",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
 }

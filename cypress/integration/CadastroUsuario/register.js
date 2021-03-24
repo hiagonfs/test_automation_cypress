@@ -1,6 +1,6 @@
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import Browser from '../../page-object/browser';
-import RegisterUserPage from '../../page-object/register_user/registerUser';
+import RegisterUserPage from '../../page-object/register_form/registerForm';
 
 const VALID_NAME = 'Hiago Fernandes';
 const INVALID_NAME = 'Hiago';
@@ -51,7 +51,7 @@ And(/^pressiono o botao Cadastrar$/, () => {
   RegisterUserPage.pressionRegisterButton();
 });
 
-Then(/^devo visualizar as informações do formulário$/, () => {
+Then(/^devo visualizar os campos do formulário$/, () => {
   return (RegisterUserPage.nameFieldIsVisible() && RegisterUserPage.emailFieldIsVisible() && RegisterUserPage.passwordFieldIsVisible());
 });
 

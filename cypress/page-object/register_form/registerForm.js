@@ -8,7 +8,7 @@ const MESSAGE_EMAIL_FIELD = '//*[@id="root"]/div/div/div[2]/form/div[2]/p';
 const MESSAGE_PASSWORD_FIELD = '//*[@id="root"]/div/div/div[2]/form/div[3]/p';
 const TABLE = '//*[@id="root"]/div/div/div[2]/table';
 
-class RegisterUserPage {
+class RegistrationForm {
 
   static pressionRegisterButton() {
     cy.xpath(REGISTER_BUTTON).first().click();
@@ -16,20 +16,17 @@ class RegisterUserPage {
 
   static nameFieldIsVisible() {
     return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[1]/label')
-      .invoke('text')
-      .contains('Nome');
+      .should('be.visible');
   }
 
   static emailFieldIsVisible() {
     return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[2]/label')
-      .invoke('text')
-      .contains('E-mail');
+      .should('be.visible');
   }
 
   static passwordFieldIsVisible() {
     return cy.xpath('//*[@id="root"]/div/div/div[2]/form/div[3]/label')
-      .invoke('text')
-      .contains('Senha');
+      .should('be.visible');
   }
 
   static insertName(value) {
@@ -74,4 +71,4 @@ class RegisterUserPage {
 
 }
 
-export default RegisterUserPage;
+export default RegistrationForm;

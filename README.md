@@ -63,3 +63,8 @@ npx cypress run
 or
 ./node_modules/.bin/cypress run
 ```
+
+### Relatório
+
+O relatório gerado está na pasta mochawesome-report, na raiz do projeto.
+Especificamente o arquivo ```mochawesome-report\mochawesome.html```
