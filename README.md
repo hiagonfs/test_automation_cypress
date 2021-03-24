@@ -3,6 +3,14 @@
 Este repositório contêm exemplos de casos de testes de automação com Cypress, utilizando o framework Cucumber. 
 Especialmente neste desafio são realizados testes end-to-end, pois são excelentes no quesito em que refletem as ações dos usuários real. 
 
+### O que é o Cypress?
+
+O Cypress.io é um framework de testes automatizados end-to-end que usa JavaScript. Usa o Selenium para poder fazer a comunicação com os elementos do DOM enviando comandos de forma remota, sem necessidade de importar libs externas do Selenium WebDriver. O que é um ponto extremamente positivo, visto que escrever testes E2E requer muitas ferramentas diferentes pra trabalhar em conjunto.
+
+### O que é o Cucumber?
+
+É uma ferramenta de software que oferece suporte ao desenvolvimento orientado por comportamento (BDD). O framework permite que os comportamentos esperados do software sejam especificados em uma linguagem lógica que os clientes possam entender, mantendo dessa forma uma documentação viva e dinâmica. 
+
 ### Sobre os testes
 
 Os testes  implementados neste repositório validam o cadastro de usuários de uma página. 
