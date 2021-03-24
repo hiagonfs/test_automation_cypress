@@ -15,9 +15,18 @@ npm install --save-dev cypress cypress-cucumber-preprocessor
 npx cypress install --force
 npm install -D cypress-xpath
 ```
-Adicione a seguinte linha em cypress/support/index.js: ```require('cypress-xpath')```
+Adicione a seguinte linha em cypress/support/index.js: 
+```require('cypress-xpath')```
 
-Adicione as seguintes linhas em cypress/plugins/index.js: ```require('cypress-xpath')```
+Adicione as seguintes linhas em cypress/plugins/index.js: 
+```
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
+```
+
 
 ### Como executar?
 
