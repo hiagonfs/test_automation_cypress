@@ -7,9 +7,8 @@ Especialmente neste desafio são realizados testes end-to-end, pois são excelen
 
 Parar executar siga a sequência de passos abaixo:
 ```
-npm install
+npm install --save-dev cypress cypress-cucumber-preprocessor
 npx cypress install --force
-
 npm install -D cypress-xpath
 ```
 Adicione a seguinte linha em cypress/support/index.js: ```require('cypress-xpath')```
