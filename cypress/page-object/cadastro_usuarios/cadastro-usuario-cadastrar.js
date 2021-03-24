@@ -6,25 +6,19 @@ const CAMPO_SENHA = '//*[@id="password"]';
 class PaginaCadastraUsuario {
 
   static pressionaBotaoCadastro() {
-    cy.get(BOTAO_CADASTRO).first().click();
+    cy.xpath(BOTAO_CADASTRO).first().click();
   }
 
-  static insereNome() {
-    cy.get(CAMPO_NOME)
-      .should('be.visible')
-      .type(Cypress.env('NAME'));
+  static insereNome(value) {
+    cy.xpath(CAMPO_NOME).type(value);
   }
 
-  static insereEmail() {
-    cy.get(CAMPO_EMAIL)
-      .should('be.visible')
-      .type(Cypress.env('EMAIL'));
+  static insereEmail(value) {
+    cy.xpath(CAMPO_EMAIL).type(value);
   }
 
-  static insereSenha() {
-    cy.get(CAMPO_SENHA)
-      .should('be.visible')
-      .type(Cypress.env('PASSWORD'));
+  static insereSenha(value) {
+    cy.xpath(CAMPO_SENHA).type(value);
   }
 
 }
