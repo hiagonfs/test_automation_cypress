@@ -27,6 +27,18 @@ module.exports = (on, config) => {
 }
 ```
 
+Adicione as seguintes linhas em package.json:
+```
+"cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": true
+}
+```
+Adicione as seguintes linhas em cypress.json:
+```
+{
+  "testFiles": "**/*.{feature,features}"
+}
+```
 
 ### Como executar?
 
